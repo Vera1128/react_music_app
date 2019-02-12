@@ -7,7 +7,7 @@ const glob = require('glob');
 
 module.exports = {
   //"__dirname"是node.js中的一个全局变量，它指向当前执行脚本所在的目录
-  entry: __dirname + "/src/main.js",
+  entry: __dirname + "/src/index.js",
   output: {
     path: __dirname + "/build",
     filename: "bundle.js"
@@ -16,7 +16,7 @@ module.exports = {
     contentBase: "./build",//本地服务器所加载的页面所在的目录
     historyApiFallback: true,//不跳转 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     inline: true,//实时刷新
-    port: 8090,
+    port: 8091,
     // 代理服务器 解决跨域问题
     proxy: {
       '/artical_list': {
